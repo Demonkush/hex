@@ -16,6 +16,7 @@ Part Arena Shooter, part RPG Shooter; inspired by games like Hexen and Unreal To
 
 * -OPTIONAL- Setup MYSQL ( The gamemode has mysql support, refer to init.lua )
 * **NOTE: With MYSQL disabled, stats will not save.**
+* **NOTE: Content not included in GitHub, download the addons from the workshop and extract the data from the .gma.**
 
 
 # Main Features
