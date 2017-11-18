@@ -11,8 +11,9 @@ Part Arena Shooter, part RPG Shooter; inspired by games like Hexen and Unreal To
 
 # How to Setup HEX
 * **Install addon and gamemode.** ( These work for the most part without configuration )
-* **Install content.** ( Make sure model content is on your server. )
+* **Install content.** ( Make sure model content is on your server. Content not included, get it from the workshop! )
 * **Install map data.** ( place the hex data folder in 'garrysmod/data' )
+* **Install maps.** ( All of the maps I've created for HEX, Soulwind and Lment are included in GitHub. )
 
 * -OPTIONAL- Setup MYSQL ( The gamemode has mysql support, refer to init.lua )
 * **NOTE: With MYSQL disabled, stats will not save.**
