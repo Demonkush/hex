@@ -126,30 +126,6 @@ if SERVER then
 		self.HEX_Checkpoint = nil 
 	end
 
-	function meta:SetDemonkush()
-		local steamid = "STEAM_0:0:10342150"
-
-		if self:SteamID() == steamid then
-			self:SetNWInt("RankLevel",200)
-			self:SetNWInt("RankLevelMax",200)
-			self:SetNWInt("Experience",99999)
-			self:SetNWInt("ExperienceMax",99999)
-			self:DoRankUp()
-		end
-	end
-
-	function meta:SetStriker()
-		local steamid = "STEAM_0:0:6883609"
-
-		if self:SteamID() == steamid then
-			self:SetNWInt("RankLevel",1000)
-			self:SetNWInt("RankLevelMax",1000)
-			self:SetNWInt("Experience",99999)
-			self:SetNWInt("ExperienceMax",99999)
-			self:DoRankUp()
-		end
-	end
-
 	function meta:SetPlayerTitle(title)
 		local t = "Rookie"
 
@@ -164,9 +140,6 @@ if SERVER then
 	end
 
 	function meta:FixRank()
-		self:SetDemonkush()
-		self:SetStriker()
-
 		for a, b in pairs(HEX.Ranks) do
 			if self:GetNWInt("RankLevel") >= b.lvl then
 				self:SetNWInt("Rank",b.rank)
