@@ -1,0 +1,7 @@
+"hex"
+{
+	"base"		"base"
+	"title"		"Hex"
+	"maps"		"^hex_"
+	"menusystem"	"1"
+}
