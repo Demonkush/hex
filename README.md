@@ -11,11 +11,13 @@ Part Arena Shooter, part RPG Shooter; inspired by games like Hexen and Unreal To
 
 # How to Setup HEX
 * **Install addon and gamemode.** ( These work for the most part without configuration )
-* **Install content.** ( Make sure model content is on your server. )
+* **Install content.** ( Make sure model content is on your server. Content not included, get it from the workshop! )
 * **Install map data.** ( place the hex data folder in 'garrysmod/data' )
+* **Install maps.** ( All of the maps I've created for HEX, Soulwind and Lment are included in GitHub. )
 
 * -OPTIONAL- Setup MYSQL ( The gamemode has mysql support, refer to init.lua )
 * **NOTE: With MYSQL disabled, stats will not save.**
+* **NOTE: Content not included in GitHub, download the addons from the workshop and extract the data from the .gma.**
 
 
 # Main Features
@@ -52,6 +54,7 @@ Part Arena Shooter, part RPG Shooter; inspired by games like Hexen and Unreal To
 * Most configuration is found in the shared tables. With basic lua knowledge you can create new elements, items and more!
 * When adding new maps, you also must place spawn data on the map and create a map icon which is downloaded by clients manually.
 * I may have forgotten some things. Please let me know if the gamemode is completely busted, or if you have trouble understanding me.
+* The Powerup system is an incomplete feature. You may see Powerups show up, but do not function properly. You can disable them in `sh_maintable`.
 
 # Credits
 * Demonkush - Mapping, Lua, some graphics for UI / particles
