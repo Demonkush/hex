@@ -52,6 +52,7 @@ Part Arena Shooter, part RPG Shooter; inspired by games like Hexen and Unreal To
 * Most configuration is found in the shared tables. With basic lua knowledge you can create new elements, items and more!
 * When adding new maps, you also must place spawn data on the map and create a map icon which is downloaded by clients manually.
 * I may have forgotten some things. Please let me know if the gamemode is completely busted, or if you have trouble understanding me.
+* The Powerup system is an incomplete feature. You may see Powerups show up, but do not function properly. You can disable them in `sh_maintable`.
 
 # Credits
 * Demonkush - Mapping, Lua, some graphics for UI / particles
