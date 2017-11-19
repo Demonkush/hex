@@ -47,7 +47,7 @@ function ENT:Touch(act)
 		--HexMsg(act,"Pickup","+"..hp.." Health",Vector(215,115,115),false)
 		HEX.SendNotification(act,Color(215,115,115),255,"+"..hp.." Health",false)
 	end
-	self:Remove()
+	timer.Simple(0,function() self:Remove() end)
 end
 
 function ENT:OnRemove()

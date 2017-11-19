@@ -62,7 +62,7 @@ function ENT:ExplodeLow()
 			end
 		end
 	end
-	self:Remove()
+	timer.Simple(0,function() self:Remove() end)
 end
 function ENT:ExplodeNormal()
 	self:DoFX("normal")
@@ -84,7 +84,7 @@ function ENT:ExplodeNormal()
 			end
 		end
 	end
-	self:Remove()
+	timer.Simple(0,function() self:Remove() end)
 end
 function ENT:ExplodeHigh()
 	self:DoFX("high")
@@ -114,7 +114,7 @@ function ENT:ExplodeHigh()
 
 		proj:Explode(5)
 	end
-	self:Remove()
+	timer.Simple(0,function() self:Remove() end)
 end
 
 function ENT:DoFX(power)

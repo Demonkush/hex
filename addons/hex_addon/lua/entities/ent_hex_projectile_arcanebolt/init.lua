@@ -54,7 +54,7 @@ function ENT:ExplodeLow()
 			v:TakeDamageInfo(dmginfo)
 		end
 	end
-	self:Remove()
+	timer.Simple(0,function() self:Remove() end)
 end
 function ENT:ExplodeNormal()
 	self:DoFX("normal")
@@ -69,7 +69,7 @@ function ENT:ExplodeNormal()
 			v:TakeDamageInfo(dmginfo)
 		end
 	end
-	self:Remove()
+	timer.Simple(0,function() self:Remove() end)
 end
 function ENT:ExplodeHigh()
 	self:DoFX("high")
@@ -84,7 +84,7 @@ function ENT:ExplodeHigh()
 			v:TakeDamageInfo(dmginfo)
 		end
 	end
-	self:Remove()
+	timer.Simple(0,function() self:Remove() end)
 end
 
 function ENT:DoFX(power)

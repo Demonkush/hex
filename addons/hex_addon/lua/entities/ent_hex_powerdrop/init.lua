@@ -40,7 +40,7 @@ function ENT:Touch(act)
 	self:EmitSound("wc3sound/exp/WandOfIllusionTarget1.wav",65,math.random(115,125))
 	act:BuffOverpowered(act,10)
 	
-	self:Remove()
+	timer.Simple(0,function() self:Remove() end)
 end
 
 function ENT:OnRemove()
