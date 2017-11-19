@@ -22,17 +22,6 @@ CreateClientConVar( "hex_cl_togglecrosshairindicator", "1", true, false )
 CreateClientConVar( "hex_cl_thirdpersonpositionx", "-25", true, false )
 CreateClientConVar( "hex_cl_thirdpersonpositiony", "-15", true, false )
 
--- Attempt to Precache models for player model selection menu
-util.PrecacheModel("models/whdow2/cultist_plr.mdl")
-util.PrecacheModel("models/player/theonlykingthatmatters.mdl")
-util.PrecacheModel("models/player/skeleton.mdl")
-util.PrecacheModel("models/player_solaire.mdl")
-util.PrecacheModel("models/player/ffx/auron.mdl")
-util.PrecacheModel("models/player/gow3_zeus.mdl")
-util.PrecacheModel("models/palutena/palutena_body.mdl")
-util.PrecacheModel("models/player/hots/sylvana_highelf.mdl")
-util.PrecacheModel("models/player/hots/sylvana_base.mdl")
-
 function HEX.SetTeamColors()
         HEX.TeamColors = {}
         HEX.TeamColors[1] = Color(215,75,75)

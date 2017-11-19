@@ -50,3 +50,11 @@ function GM:Initialize()
 		team.SetUp( 12, "Spectators", Color(155,155,155) ) 
 	end)
 end
+
+util.PrecacheModel("models/whdow2/cultist_plr.mdl")
+util.PrecacheModel("models/player/skeleton.mdl")
+util.PrecacheModel("models/player/theonlykingthatmatters.mdl")
+util.PrecacheModel("models/player/ffx/auron.mdl")
+util.PrecacheModel("models/player/gow3_zeus.mdl")
+util.PrecacheModel("models/player/hots/sylvana_highelf.mdl")
+util.PrecacheModel("models/player/hots/sylvana_base.mdl")
