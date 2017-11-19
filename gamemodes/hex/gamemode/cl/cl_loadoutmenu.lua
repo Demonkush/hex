@@ -284,42 +284,43 @@ function HexLoadout()
 	PmodelPanelTitle:SetFont("HexFontSmall")
 	PmodelPanelTitle:SizeToContents()
 	for a, b in pairs(models) do
-		local POutline = vgui.Create("DPanel", PmodelPanelList )
-		POutline:SetPos( 10+marginx, 10+marginy )
-		POutline:SetSize( 80, 80 )
-		POutline.Paint = function()
-			draw.RoundedBox( 8, 0, 0, POutline:GetWide(), POutline:GetTall(), Color( 175, 175, 175, 100 ) )
+		if util.IsValidModel(b.model) then
+			local POutline = vgui.Create("DPanel", PmodelPanelList )
+			POutline:SetPos( 10+marginx, 10+marginy )
+			POutline:SetSize( 80, 80 )
+			POutline.Paint = function()
+				draw.RoundedBox( 8, 0, 0, POutline:GetWide(), POutline:GetTall(), Color( 175, 175, 175, 100 ) )
+			end
+
+			local PmodelSelect = vgui.Create( "DModelPanel", PmodelPanelList )
+			PmodelSelect:SetPos( 10+marginx, 10+marginy )
+			PmodelSelect:SetSize( 80, 80 )	
+			PmodelSelect:SetModel( b.model )
+			PmodelSelect:SetTooltip( b.name )
+			PmodelSelect.DoClick = function()
+				net.Start( "playermodelsend" )
+					net.WriteString( b.name )
+					net.WriteString( b.model )
+				net.SendToServer()
+				PmodelPanel:Hide()
+			end
+
+
+			function PmodelSelect:LayoutEntity( Entity ) return end
+			local eyepos = PmodelSelect.Entity:GetBonePosition( PmodelSelect.Entity:LookupBone( "ValveBiped.Bip01_Head1" ) )
+			eyepos:Add( Vector( 0, 0, -5 ) )
+			PmodelSelect:SetLookAt( eyepos )
+			PmodelSelect:SetCamPos( eyepos-Vector( -25, 0, -5 ) )
+			PmodelSelect.Entity:SetEyeTarget( eyepos-Vector( -12, 0, 0 ) )
+
+			marginx = marginx + 110
+			column = column + 1
+			if column > 2 then
+				marginx = 0
+				marginy = marginy + 100
+				column = 0
+			end
 		end
-
-		local PmodelSelect = vgui.Create( "DModelPanel", PmodelPanelList )
-		PmodelSelect:SetPos( 10+marginx, 10+marginy )
-		PmodelSelect:SetSize( 80, 80 )	
-		PmodelSelect:SetModel( b.model )
-		PmodelSelect:SetTooltip( b.name )
-		PmodelSelect.DoClick = function()
-			net.Start( "playermodelsend" )
-				net.WriteString( b.name )
-				net.WriteString( b.model )
-			net.SendToServer()
-			PmodelPanel:Hide()
-		end
-
-
-		function PmodelSelect:LayoutEntity( Entity ) return end
-		local eyepos = PmodelSelect.Entity:GetBonePosition( PmodelSelect.Entity:LookupBone( "ValveBiped.Bip01_Head1" ) )
-		eyepos:Add( Vector( 0, 0, -5 ) )
-		PmodelSelect:SetLookAt( eyepos )
-		PmodelSelect:SetCamPos( eyepos-Vector( -25, 0, -5 ) )
-		PmodelSelect.Entity:SetEyeTarget( eyepos-Vector( -12, 0, 0 ) )
-
-		marginx = marginx + 110
-		column = column + 1
-		if column > 2 then
-			marginx = 0
-			marginy = marginy + 100
-			column = 0
-		end
-
 	end
 
 	a.Think = function()
