@@ -3,6 +3,8 @@ Public release of HEX.
 
 * **For HEX support**, you can add me on Steam http://steamcommunity.com/id/Demonkush
 * I will only provide support with the unmodified gamemode. I can provide pointers on how to modify it, but I will not help you fix it if you broke it yourself.
+* **Workshop Version** All in One package: ( link here when workshop ready )
+* **GitHub Version** Addon and Gamemodes separate. I plan to eventually isolate the addon so it can be used in other gamemodes.
 
 
 # What is HEX?
@@ -48,7 +50,7 @@ Part Arena Shooter, part RPG Shooter; inspired by games like Hexen and Unreal To
 # Things to Know
 * I am releasing HEX to the public because I am working on other projects right now, and feel bad about letting this project stagnate.
 * **HEX is NOT complete.** It's playable, but overall it still needs a lot of work. I hope you guys can still have fun with it!
-* Feel free to modify the gamemode to your liking, but **DO NOT upload to the workshop or anywhere else!!!** IT is not a workshop ready addon and requires extra setup to play. **ONLY download from GITHUB (here)!**
+* Feel free to modify the gamemode to your liking, but **DO NOT upload to the workshop or anywhere else!!!** I am working on a Workshop ready version, and a link will be provided somewhere above.
 * You are allowed to fork this repository ( if not, let me know ). The main repo will only be updated by myself; I will decide if your changes are acceptable.
 * The gamemode is kind of a mess. If I don't provide documentation in the future, you can ask me for assistance.
 * Most configuration is found in the shared tables. With basic lua knowledge you can create new elements, items and more!
