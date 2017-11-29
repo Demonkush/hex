@@ -26,7 +26,7 @@ Part Arena Shooter, part RPG Shooter; inspired by games like Hexen and Unreal To
 * **Dynamic Gametype System** ( changes the way HEX is played )
 * **Elemental Damage and RPG Damage System** ( critical strikes, fire damage, variable damage, etc )
 * **Built-in Map Vote System** ( accounts for voted gametype and picks applicable maps )
-* **MYSQL Support** ( Saves player level and exp. (LEVEL = RANK not power) )
+* **MYSQL Support** ( Saves player level and exp. (LEVEL = RANK not power) ) -- **GITHUB Version ONLY!!**
 * **HEX Weapon System** ( 4 attacks per weapon. **Low Power**, **Normal**, **High Power** (Overpowered), **Special** (Magesoul) )
 * **Current Gametypes** ( Skirmish, Team Skirmish, Elder, Greed, Scavenger, Mountain Man )
 * and lots more!
